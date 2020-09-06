@@ -31,27 +31,8 @@
 <body>
   <section class="container">
     <div class="row">
-      <form class="col-md-5 offset-md-3 form-signin" method="POST" action="/auth/login">
-        <% if (error) { %>
-        <div class="alert alert-danger">
-          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-          <strong>
-            <%= error %>
-          </strong>
-        </div>
-        <% } %>
-        <img class="mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal text-center">Sign in</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required
-          autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      </form>
+      <div class="col-md-12" id="root"></div>
     </div>
-    <br />
-    <div class="col-md-12" id="root"></div>
   </section>
 
 
@@ -61,7 +42,10 @@
     crossorigin="anonymous"></script>
   <script src="/bundle.js"></script>
   <script>
-    components.renderTable("#root");
+    components.renderLogin("#root", {
+      urlAutentication: "/auth/login", title: "Sign In", buttonTitle: "sign in",
+      authenticationSuccessRedirectTo: "/home"
+    });
   </script>
 </body>
 

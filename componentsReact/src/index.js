@@ -1,21 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDom from "react-dom";
-import Table from "./components/Table";
+import Login from "./components/Auth/Login";
+import Logout from "./components/Auth/Logout";
 
-const renderAlert = (container, settings) => {
+const renderLogin = (container, settings) => {
     return ReactDom.render(
-        (<div className="alert alert-danger"><p>Alert render success</p></div>), 
+        <Login {...settings} />,
         document.querySelector(container)
     );
 }
 
-const renderTable = (container, settings) => {
+const renderLogout = (container, settings) => {
     return ReactDom.render(
-        <Table titles={["Id", "Name", "Email"]} />, 
+        <Logout {...settings} />,
         document.querySelector(container)
     );
 }
 
 export {
-    renderAlert, renderTable
+    renderLogin, renderLogout
 }

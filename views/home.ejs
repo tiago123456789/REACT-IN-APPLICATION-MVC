@@ -13,7 +13,6 @@
 
 <body>
   <div class="container">
-    <a href="/auth/logout" class="btn btn-danger">Sair</a>
     <div id="root"></div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -21,7 +20,9 @@
     crossorigin="anonymous"></script>
   <script src="bundle.js"></script>
   <script>
-    components.renderAlert("#root");
+    components.renderLogout("#root", {
+      urlLogout: "/auth/logout", title: "Logout"
+    });
   </script>
 </body>
 

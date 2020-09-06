@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Set middleware work session in application.  
 app.use(session({
-    name: 'app.sid',
+    name: 'sessionid',
     secret: process.env.SECRET_COOKIE,
     resave: true,
 }));
