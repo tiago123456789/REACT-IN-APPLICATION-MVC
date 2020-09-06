@@ -4,7 +4,7 @@
   "description": "Authentication and authorization in application web",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 ./src/index.js",
+    "start": "pm2 start ./src/index.js",
     "start:debug": "node_modules/.bin/nodemon --inspect ./src/index.js",
     "start:dev": "node_modules/.bin/nodemon ./src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
