@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    app: app-mvc-using-react
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-mvc-using-react
+  template:
+    metadata:
+      labels:
+        app: app-mvc-using-react
+    spec:
+      containers:
+      - name: app-mvc-using-react
+        image: tiagorosadacosta123456/app-mvc-using-react
+        ports:
+        - containerPort: 3000
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-mvc-using-react
+spec:
+  selector:
+    app: app-mvc-using-react
+  ports:
+  - protocol: TCP
+    port: 3000
+    targetPort: 3000
+
