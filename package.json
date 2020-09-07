@@ -8,7 +8,7 @@
     "start:debug": "node_modules/.bin/nodemon --inspect ./src/index.js",
     "start:dev": "node_modules/.bin/nodemon ./src/index.js",
     "test": "echo \"No test implemented\""
-  },
+  }, 
   "author": "Tiago rosa da costa <tiagorosadacost@gmail.com>",
   "license": "ISC",
   "devDependencies": {
