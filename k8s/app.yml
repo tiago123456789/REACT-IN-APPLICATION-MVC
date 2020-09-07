@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app-mvc-using-react
-        image: tiagorosadacosta123456/app-mvc-using-react
+        image: gcr.io/studies-kubernates/app-mvn-using-react
         ports:
         - containerPort: 3000
 
